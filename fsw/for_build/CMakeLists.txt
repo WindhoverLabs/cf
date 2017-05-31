@@ -34,7 +34,6 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/
 )
 
-
 add_airliner_app_unit_test(CF-UT
     UTF 
     SOURCES

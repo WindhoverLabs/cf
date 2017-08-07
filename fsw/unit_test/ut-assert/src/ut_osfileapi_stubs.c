@@ -4,7 +4,7 @@
 **
 ** $Id: ut_osfileapi_stubs.c 1.2 2015/03/06 14:37:19EST sstrege Exp  $
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -260,7 +260,7 @@ int32 OS_check_name_length(const char *path)
     return OS_FS_SUCCESS;
 }
 
-int32 OS_ShellOutputToFile(char* Cmd, int32 OS_fd)
+int32 OS_ShellOutputToFile(const char* Cmd, int32 OS_fd)
 {   
     return OS_FS_SUCCESS;
 }

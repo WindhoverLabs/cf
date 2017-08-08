@@ -4,7 +4,7 @@
 **
 ** $Id: ut_cfe_es_stubs.c 1.3 2015/03/06 14:37:10EST sstrege Exp  $
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -82,7 +82,6 @@ void Ut_CFE_ES_SetFunctionHook(uint32 Index, void *FunPtr)
     else if (Index == UT_CFE_ES_EXITCHILDTASK_INDEX)        { Ut_CFE_ES_HookTable.CFE_ES_ExitChildTask = FunPtr; }
     else if (Index == UT_CFE_ES_INCREMENTTASKCOUNTER_INDEX) { Ut_CFE_ES_HookTable.CFE_ES_IncrementTaskCounter = FunPtr; }
     else if (Index == UT_CFE_ES_WRITETOSYSLOG_INDEX)        { Ut_CFE_ES_HookTable.CFE_ES_WriteToSysLog = FunPtr; }
-    else if (Index == UT_CFE_ES_REGISTERDRIVER_INDEX)       { Ut_CFE_ES_HookTable.CFE_ES_RegisterDriver = FunPtr; }
     else if (Index == UT_CFE_ES_UNLOADDRIVER_INDEX)         { Ut_CFE_ES_HookTable.CFE_ES_UnloadDriver = FunPtr; }
     else if (Index == UT_CFE_ES_CALCULATECRC_INDEX)         { Ut_CFE_ES_HookTable.CFE_ES_CalculateCRC = FunPtr; }
     else if (Index == UT_CFE_ES_REGISTERCDS_INDEX)          { Ut_CFE_ES_HookTable.CFE_ES_RegisterCDS = FunPtr; }
@@ -252,16 +251,6 @@ void  CFE_ES_IncrementTaskCounter(void)
 }
 
 int32 CFE_ES_WriteToSysLog(const char *SpecStringPtr, ...)
-{
-    return CFE_SUCCESS;
-}
-
-int32 CFE_ES_RegisterDriver(uint32 *DriverIdPtr, CFE_ES_DeviceDriver_t *DriverDescPtr)
-{
-    return CFE_SUCCESS;
-}
-
-int32 CFE_ES_UnloadDriver(uint32 DriverId)
 {
     return CFE_SUCCESS;
 }

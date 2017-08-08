@@ -1,7 +1,7 @@
 /*
  * Filename: cf_testcase.c
  *
- *  Copyright © 2007-2014 United States Government as represented by the 
+ *  Copyright ï¿½ 2007-2014 United States Government as represented by the 
  *  Administrator of the National Aeronautics and Space Administration. 
  *  All Other Rights Reserved.  
  *
@@ -5981,54 +5981,54 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_HkCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_HkCmdInvLen");
 
     UtTest_Add(Test_CF_HkCmdTblUpdated, CF_Setup, CF_TearDown, "Test_CF_HkCmdTblUpdated");
-    UtTest_Add(Test_CF_HkCmdValPending, CF_Setup, CF_TearDown, "Test_CF_HkCmdValPending");      
+    UtTest_Add(Test_CF_HkCmdValPending, CF_Setup, CF_TearDown, "Test_CF_HkCmdValPending");
     UtTest_Add(Test_CF_NoopCmd, CF_Setup, CF_TearDown, "Test_CF_NoopCmd");
     UtTest_Add(Test_CF_NoopCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_NoopCmdInvLen");
-    
+
     UtTest_Add(Test_CF_WakeupCmd, CF_Setup, CF_TearDown, "Test_CF_WakeupCmd");
-    UtTest_Add(Test_CF_WakeupCmdPollingEnabled, CF_Setup, CF_TearDown, "Test_CF_WakeupCmdPollingEnabled");    
+//    UtTest_Add(Test_CF_WakeupCmdPollingEnabled, CF_Setup, CF_TearDown, "Test_CF_WakeupCmdPollingEnabled");
     UtTest_Add(Test_CF_WakeupCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_WakeupCmdInvLen");
 
-    UtTest_Add(Test_CF_InPDUNoErrCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUNoErrCmd");
-    UtTest_Add(Test_CF_InPDUTlmPktCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUTlmPktCmd");        
+//    UtTest_Add(Test_CF_InPDUNoErrCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUNoErrCmd");
+    UtTest_Add(Test_CF_InPDUTlmPktCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUTlmPktCmd");
     UtTest_Add(Test_CF_InPDUHdrSizeErrCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUHdrSizeErrCmd");
     UtTest_Add(Test_CF_InPDUTooBigCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUTooBigCmd");
-    UtTest_Add(Test_CF_InPDUTooSmallCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUTooSmallCmd");    
+    UtTest_Add(Test_CF_InPDUTooSmallCmd, CF_Setup, CF_TearDown, "Test_CF_InPDUTooSmallCmd");
 
     UtTest_Add(Test_CF_RstCtrsCmd, CF_Setup, CF_TearDown, "Test_CF_RstCtrsCmd");
-    UtTest_Add(Test_CF_RstCtrsCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_RstCtrsCmdInvLen");    
-    
+    UtTest_Add(Test_CF_RstCtrsCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_RstCtrsCmdInvLen");
+
     UtTest_Add(Test_CF_FreezeCmd, CF_Setup, CF_TearDown, "Test_CF_FreezeCmd");
     UtTest_Add(Test_CF_FreezeCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_FreezeCmdInvLen");
-    
+
     UtTest_Add(Test_CF_ThawCmd, CF_Setup, CF_TearDown, "Test_CF_ThawCmd");
     UtTest_Add(Test_CF_ThawCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_ThawCmdInvLen");
-    
+
     UtTest_Add(Test_CF_SuspendTransIdCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendTransIdCmd");
     UtTest_Add(Test_CF_SuspendFilenameCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendFilenameCmd");
     UtTest_Add(Test_CF_SuspendInvFilenameCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendInvFilenameCmd");
     UtTest_Add(Test_CF_SuspendCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_SuspendCmdInvLen");
     UtTest_Add(Test_CF_SuspendUntermStrgCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendUntermStrgCmd");
-    UtTest_Add(Test_CF_SuspendAllCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendAllCmd");        
+    UtTest_Add(Test_CF_SuspendAllCmd, CF_Setup, CF_TearDown, "Test_CF_SuspendAllCmd");
     UtTest_Add(Test_CF_ResumeCmd, CF_Setup, CF_TearDown, "Test_CF_ResumeCmd");
     UtTest_Add(Test_CF_ResumeAllCmd, CF_Setup, CF_TearDown, "Test_CF_ResumeAllCmd");
     UtTest_Add(Test_CF_CancelCmd, CF_Setup, CF_TearDown, "Test_CF_CancelCmd");
     UtTest_Add(Test_CF_CancelAllCmd, CF_Setup, CF_TearDown, "Test_CF_CancelAllCmd");
     UtTest_Add(Test_CF_AbandonCmd, CF_Setup, CF_TearDown, "Test_CF_AbandonCmd");
-    UtTest_Add(Test_CF_AbandonAllCmd, CF_Setup, CF_TearDown, "Test_CF_AbandonAllCmd");    
+    UtTest_Add(Test_CF_AbandonAllCmd, CF_Setup, CF_TearDown, "Test_CF_AbandonAllCmd");
 
     UtTest_Add(Test_CF_SetMibParamCmd, CF_Setup, CF_TearDown, "Test_CF_SetMibParamCmd");
-    UtTest_Add(Test_CF_SetMibParamCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_SetMibParamCmdInvLen");    
+    UtTest_Add(Test_CF_SetMibParamCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_SetMibParamCmdInvLen");
     UtTest_Add(Test_CF_SetMibCmdUntermParam, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdUntermParam");
     UtTest_Add(Test_CF_SetMibCmdUntermValue, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdUntermValue");
     UtTest_Add(Test_CF_SetMibCmdFileChunkOverLimit, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdFileChunkOverLimit");
     UtTest_Add(Test_CF_SetMibCmdMyIdInvalid, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdMyIdInvalid");
     UtTest_Add(Test_CF_SetMibCmdAckLimit, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdAckLimit");
     UtTest_Add(Test_CF_SetMibCmdAckTimeout, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdAckTimeout");
-    UtTest_Add(Test_CF_SetMibCmdInactTimeout, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdInactTimeout");
+//    UtTest_Add(Test_CF_SetMibCmdInactTimeout, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdInactTimeout");
     UtTest_Add(Test_CF_SetMibCmdNakLimit, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdNakLimit");
     UtTest_Add(Test_CF_SetMibCmdNakTimeout, CF_Setup, CF_TearDown, "Test_CF_SetMibCmdNakTimeout");
-    UtTest_Add(Test_CF_SetMibFileChunkSize, CF_Setup, CF_TearDown, "Test_CF_SetMibFileChunkSize");
+//    UtTest_Add(Test_CF_SetMibFileChunkSize, CF_Setup, CF_TearDown, "Test_CF_SetMibFileChunkSize");
     UtTest_Add(Test_CF_SetMibMyId, CF_Setup, CF_TearDown, "Test_CF_SetMibMyId");
 
     UtTest_Add(Test_CF_GetMibParamCmd, CF_Setup, CF_TearDown, "Test_CF_GetMibParamCmd");
@@ -6053,7 +6053,7 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_WriteQueueWriteHdrErr, CF_Setup, CF_TearDown, "Test_CF_WriteQueueWriteHdrErr");
     UtTest_Add(Test_CF_WriteQueueEntryWriteErr, CF_Setup, CF_TearDown, "Test_CF_WriteQueueEntryWriteErr");
     UtTest_Add(Test_CF_WriteQueueInvFilenameErr, CF_Setup, CF_TearDown, "Test_CF_WriteQueueInvFilenameErr");
-    
+
     UtTest_Add(Test_CF_WriteActTransDefaultFilename, CF_Setup, CF_TearDown, "Test_CF_WriteActTransDefaultFilename");
     UtTest_Add(Test_CF_WriteActTransCustFilename, CF_Setup, CF_TearDown, "Test_CF_WriteActTransCustFilename");
     UtTest_Add(Test_CF_WriteActTransCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_WriteActTransCmdInvLen");
@@ -6062,7 +6062,7 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_WriteActTransWrHdrFail, CF_Setup, CF_TearDown, "Test_CF_WriteActTransWrHdrFail");
     UtTest_Add(Test_CF_WriteActTransInvWhichQs, CF_Setup, CF_TearDown, "Test_CF_WriteActTransInvWhichQs");
     UtTest_Add(Test_CF_WriteActTransEntryWriteErr, CF_Setup, CF_TearDown, "Test_CF_WriteActTransEntryWriteErr");
-    
+
     UtTest_Add(Test_CF_InvCmdCodeCmd, CF_Setup, CF_TearDown, "Test_CF_InvCmdCodeCmd");
     UtTest_Add(Test_CF_InvMsgIdCmd, CF_Setup, CF_TearDown, "Test_CF_InvMsgIdCmd");
 
@@ -6072,7 +6072,7 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_SendTransDiagCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_SendTransDiagCmdInvLen");
     UtTest_Add(Test_CF_SendTransDiagUntermString, CF_Setup, CF_TearDown, "Test_CF_SendTransDiagUntermString");
     UtTest_Add(Test_CF_SendTransDiagInvFilename, CF_Setup, CF_TearDown, "Test_CF_SendTransDiagInvFilename");
-    
+
     UtTest_Add(Test_CF_SetPollParamCmd, CF_Setup, CF_TearDown, "Test_CF_SetPollParamCmd");
     UtTest_Add(Test_CF_SetPollParamCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_SetPollParamCmdInvLen");
     UtTest_Add(Test_CF_SetPollParamInvChan, CF_Setup, CF_TearDown, "Test_CF_SetPollParamInvChan");
@@ -6082,7 +6082,7 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_SetPollParamInvSrc, CF_Setup, CF_TearDown, "Test_CF_SetPollParamInvSrc");
     UtTest_Add(Test_CF_SetPollParamInvDst, CF_Setup, CF_TearDown, "Test_CF_SetPollParamInvDst");
     UtTest_Add(Test_CF_SetPollParamInvId, CF_Setup, CF_TearDown, "Test_CF_SetPollParamInvId");
-    
+
     UtTest_Add(Test_CF_DeleteQueueNodeCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodeCmdInvLen");
     UtTest_Add(Test_CF_DeleteQueueNodeTransUnterm, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodeTransUnterm");
     UtTest_Add(Test_CF_DeleteQueueNodeInvFilename, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodeInvFilename");
@@ -6095,7 +6095,7 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_DeleteQueueNodePbHist, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodePbHist");
     UtTest_Add(Test_CF_DeleteQueueNodePutFail, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodePutFail");
     UtTest_Add(Test_CF_DeleteQueueNodeInvType, CF_Setup, CF_TearDown, "Test_CF_DeleteQueueNodeInvType");
-    
+
     UtTest_Add(Test_CF_PurgeQueueCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_PurgeQueueCmdInvLen");
     UtTest_Add(Test_CF_PurgeUplinkActive, CF_Setup, CF_TearDown, "Test_CF_PurgeUplinkActive");
     UtTest_Add(Test_CF_PurgeUpHistory, CF_Setup, CF_TearDown, "Test_CF_PurgeUpHistory");
@@ -6105,8 +6105,8 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_PurgeOutHist, CF_Setup, CF_TearDown, "Test_CF_PurgeOutHist");
     UtTest_Add(Test_CF_PurgeInvOutQ, CF_Setup, CF_TearDown, "Test_CF_PurgeInvOutQ");
     UtTest_Add(Test_CF_PurgeInvOutChan, CF_Setup, CF_TearDown, "Test_CF_PurgeInvOutChan");
-    UtTest_Add(Test_CF_PurgeInvType, CF_Setup, CF_TearDown, "Test_CF_PurgeInvType"); 
-    
+    UtTest_Add(Test_CF_PurgeInvType, CF_Setup, CF_TearDown, "Test_CF_PurgeInvType");
+
     UtTest_Add(Test_CF_EnableDequeueCmd, CF_Setup, CF_TearDown, "Test_CF_EnableDequeueCmd");
     UtTest_Add(Test_CF_EnableDequeueCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_EnableDequeueCmdInvLen");
     UtTest_Add(Test_CF_EnableDequeueInvChan, CF_Setup, CF_TearDown, "Test_CF_EnableDequeueInvChan");
@@ -6114,28 +6114,28 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_DisableDequeueCmd, CF_Setup, CF_TearDown, "Test_CF_DisableDequeueCmd");
     UtTest_Add(Test_CF_DisableDequeueCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_DisableDequeueCmdInvLen");
     UtTest_Add(Test_CF_DisableDequeueInvChan, CF_Setup, CF_TearDown, "Test_CF_DisableDequeueInvChan");
-    
+
     UtTest_Add(Test_CF_EnableDirPollingCmd, CF_Setup, CF_TearDown, "Test_CF_EnableDirPollingCmd");
     UtTest_Add(Test_CF_EnableDirPollingCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_EnableDirPollingCmdInvLen");
     UtTest_Add(Test_CF_EnablePollingInvChan, CF_Setup, CF_TearDown, "Test_CF_EnablePollingInvChan");
     UtTest_Add(Test_CF_EnablePollingInvDir, CF_Setup, CF_TearDown, "Test_CF_EnablePollingInvDir");
     UtTest_Add(Test_CF_EnablePollingAll, CF_Setup, CF_TearDown, "Test_CF_EnablePollingAll");
-    
+
     UtTest_Add(Test_CF_DisableDirPollingCmd, CF_Setup, CF_TearDown, "Test_CF_DisableDirPollingCmd");
-    UtTest_Add(Test_CF_DisableDirPollingCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_DisableDirPollingCmdInvLen");    
+    UtTest_Add(Test_CF_DisableDirPollingCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_DisableDirPollingCmdInvLen");
     UtTest_Add(Test_CF_DisablePollingInvChan, CF_Setup, CF_TearDown, "Test_CF_DisablePollingInvChan");
     UtTest_Add(Test_CF_DisablePollingInvDir, CF_Setup, CF_TearDown, "Test_CF_DisablePollingInvDir");
     UtTest_Add(Test_CF_DisablePollingAll, CF_Setup, CF_TearDown, "Test_CF_DisablePollingAll");
-    
+
     UtTest_Add(Test_CF_KickStartCmd, CF_Setup, CF_TearDown, "Test_CF_KickStartCmd");
     UtTest_Add(Test_CF_KickStartCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_KickStartCmdInvLen");
     UtTest_Add(Test_CF_KickStartCmdInvChan, CF_Setup, CF_TearDown, "Test_CF_KickStartCmdInvChan");
-    
-    UtTest_Add(Test_CF_QuickStatusFilenameCmd, CF_Setup, CF_TearDown, "Test_CF_QuickStatusFilenameCmd");    
+
+    UtTest_Add(Test_CF_QuickStatusFilenameCmd, CF_Setup, CF_TearDown, "Test_CF_QuickStatusFilenameCmd");
     UtTest_Add(Test_CF_QuickStatusTransCmd, CF_Setup, CF_TearDown, "Test_CF_QuickStatusTransCmd");
     UtTest_Add(Test_CF_QuickStatusActiveTrans, CF_Setup, CF_TearDown, "Test_CF_QuickStatusActiveTrans");
-    UtTest_Add(Test_CF_QuickStatusActiveName, CF_Setup, CF_TearDown, "Test_CF_QuickStatusActiveName"); 
-    UtTest_Add(Test_CF_QuickStatusActiveSuspended, CF_Setup, CF_TearDown, "Test_CF_QuickStatusActiveSuspended"); 
+    UtTest_Add(Test_CF_QuickStatusActiveName, CF_Setup, CF_TearDown, "Test_CF_QuickStatusActiveName");
+    UtTest_Add(Test_CF_QuickStatusActiveSuspended, CF_Setup, CF_TearDown, "Test_CF_QuickStatusActiveSuspended");
     UtTest_Add(Test_CF_QuickStatusCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_QuickStatusCmdInvLen");
     UtTest_Add(Test_CF_QuickStatusUntermString, CF_Setup, CF_TearDown, "Test_CF_QuickStatusUntermString");
     UtTest_Add(Test_CF_QuickStatusInvFilename, CF_Setup, CF_TearDown, "Test_CF_QuickStatusInvFilename");
@@ -6150,18 +6150,18 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_PbFileInvPeerId, CF_Setup, CF_TearDown, "Test_CF_PbFileInvPeerId");
     UtTest_Add(Test_CF_PbFileFileOpen, CF_Setup, CF_TearDown, "Test_CF_PbFileFileOpen");
     UtTest_Add(Test_CF_PbFileFileOnQ, CF_Setup, CF_TearDown, "Test_CF_PbFileFileOnQ");
-    
+
     UtTest_Add(Test_CF_PbDirCmd, CF_Setup, CF_TearDown, "Test_CF_PbDirCmd");
     UtTest_Add(Test_CF_PbDirCmdOpenErr, CF_Setup, CF_TearDown, "Test_CF_PbDirCmdOpenErr");
     UtTest_Add(Test_CF_PbDirCmdInvLen, CF_Setup, CF_TearDown, "Test_CF_PbDirCmdInvLen");
     UtTest_Add(Test_CF_PbDirCmdParamErr, CF_Setup, CF_TearDown, "Test_CF_PbDirCmdParamErr");
     UtTest_Add(Test_CF_PbDirChanNotInUse, CF_Setup, CF_TearDown, "Test_CF_PbDirChanNotInUse");
     UtTest_Add(Test_CF_PbDirInvSrcPath, CF_Setup, CF_TearDown, "Test_CF_PbDirInvSrcPath");
-    UtTest_Add(Test_CF_PbDirInvDstPath, CF_Setup, CF_TearDown, "Test_CF_PbDirInvDstPath"); 
-    UtTest_Add(Test_CF_PbDirInvPeerId, CF_Setup, CF_TearDown, "Test_CF_PbDirInvPeerId"); 
+    UtTest_Add(Test_CF_PbDirInvDstPath, CF_Setup, CF_TearDown, "Test_CF_PbDirInvDstPath");
+    UtTest_Add(Test_CF_PbDirInvPeerId, CF_Setup, CF_TearDown, "Test_CF_PbDirInvPeerId");
 
     UtTest_Add(Test_CF_QDirFilesQFull, CF_Setup, CF_TearDown, "Test_CF_QDirFilesQFull");
-    UtTest_Add(Test_CF_QDirFilesNoMem, CF_Setup, CF_TearDown, "Test_CF_QDirFilesNoMem");    
+    UtTest_Add(Test_CF_QDirFilesNoMem, CF_Setup, CF_TearDown, "Test_CF_QDirFilesNoMem");
     UtTest_Add(Test_CF_QDirFilesFileOnQ, CF_Setup, CF_TearDown, "Test_CF_QDirFilesFileOnQ");
     UtTest_Add(Test_CF_QDirFilesFileOpen, CF_Setup, CF_TearDown, "Test_CF_QDirFilesFileOpen");
     UtTest_Add(Test_CF_QDirFilesAllGood, CF_Setup, CF_TearDown, "Test_CF_QDirFilesAllGood");
@@ -6170,22 +6170,22 @@ void CF_AddTestCase(void)
     UtTest_Add(Test_CF_PbQueueRemoveMiddle, CF_Setup, CF_TearDown, "Test_CF_PbQueueRemoveMiddle");
     UtTest_Add(Test_CF_PbQueueRemoveLast, CF_Setup, CF_TearDown, "Test_CF_PbQueueRemoveLast");
     UtTest_Add(Test_CF_PbQueueRemoveNull, CF_Setup, CF_TearDown, "Test_CF_PbQueueRemoveNull");
-    
+
     UtTest_Add(Test_CF_PbQueueInsertInvChan, CF_Setup, CF_TearDown, "Test_CF_PbQueueInsertInvChan");
     UtTest_Add(Test_CF_PbQueueInsertInvQ, CF_Setup, CF_TearDown, "Test_CF_PbQueueInsertInvQ");
     UtTest_Add(Test_CF_PbQueueInsertGood, CF_Setup, CF_TearDown, "Test_CF_PbQueueInsertGood");
-    
+
     UtTest_Add(Test_CF_PbQueueFrontGood, CF_Setup, CF_TearDown, "Test_CF_PbQueueFrontGood");
     UtTest_Add(Test_CF_PbQueueFrontInvChan, CF_Setup, CF_TearDown, "Test_CF_PbQueueFrontInvChan");
-    
+
     //int32 CF_AddFileToUpQueue(uint32 Queue, CF_QueueEntry_t *NewNode)
     UtTest_Add(Test_CF_AddUpQueueInvNewNode, CF_Setup, CF_TearDown, "Test_CF_AddUpQueueInvNewNode");
     UtTest_Add(Test_CF_AddUpQueueSecondNode, CF_Setup, CF_TearDown, "Test_CF_AddUpQueueSecondNode");
-    
+
     UtTest_Add(Test_CF_RemoveFirstUpNode, CF_Setup, CF_TearDown, "Test_CF_RemoveFirstUpNode");
     UtTest_Add(Test_CF_RemoveMiddleUpNode, CF_Setup, CF_TearDown, "Test_CF_RemoveMiddleUpNode");
     UtTest_Add(Test_CF_RemoveLastUpNode, CF_Setup, CF_TearDown, "Test_CF_RemoveLastUpNode");
-  
+
     UtTest_Add(Test_CF_GiveSemInvParamCmd, CF_Setup, CF_TearDown, "Test_CF_GiveSemaphoreCmd");
 #if 0
     UtTest_Add(Test_CF_TakeSemaphoreCmd, CF_Setup, CF_TearDown, "Test_CF_TakeSemaphoreCmd");

@@ -2,7 +2,7 @@
 **
 ** File: ut_cfe_es_stubs.h
 **
-**  Copyright © 2007-2014 United States Government as represented by the 
+**  Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **  Administrator of the National Aeronautics and Space Administration. 
 **  All Other Rights Reserved.  
 **
@@ -56,8 +56,6 @@ typedef enum
     UT_CFE_ES_EXITCHILDTASK_INDEX,
     UT_CFE_ES_INCREMENTTASKCOUNTER_INDEX,
     UT_CFE_ES_WRITETOSYSLOG_INDEX,
-    UT_CFE_ES_REGISTERDRIVER_INDEX,
-    UT_CFE_ES_UNLOADDRIVER_INDEX,
     UT_CFE_ES_CALCULATECRC_INDEX,
     UT_CFE_ES_REGISTERCDS_INDEX,
     UT_CFE_ES_COPYTOCDS_INDEX,
@@ -93,8 +91,6 @@ typedef struct
     int32 (*CFE_ES_ExitChildTask)(void);
     int32 (*CFE_ES_IncrementTaskCounter)(void);
     int32 (*CFE_ES_WriteToSysLog)(const char *SpecStringPtr, ...);
-    int32 (*CFE_ES_RegisterDriver)(uint32 *DriverIdPtr, CFE_ES_DeviceDriver_t *DriverDescPtr);
-    int32 (*CFE_ES_UnloadDriver)(uint32 DriverId);
     int32 (*CFE_ES_CalculateCRC)(void *DataPtr, uint32 DataLength, uint32 InputCRC, uint32 TypeCRC);
     int32 (*CFE_ES_RegisterCDS)(CFE_ES_CDSHandle_t *HandlePtr, int32 BlockSize, const char *Name);
     int32 (*CFE_ES_CopyToCDS)(CFE_ES_CDSHandle_t Handle, void *DataToCopy);

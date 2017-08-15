@@ -23,7 +23,6 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/callbacks.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/callbacks.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_lib.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_lib.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_private.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/default_filestore.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/default_indication.c
@@ -66,10 +65,12 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_requires.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_syntax.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp.h
+        
     INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/
+        
     USER_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/user_doxy.in
 )
 
@@ -98,7 +99,6 @@ add_airliner_app_unit_test(cf-ut
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/callbacks.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/callbacks.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_lib.c
-        ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_lib.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/cfdp_private.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/default_filestore.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/default_indication.c
@@ -141,6 +141,11 @@ add_airliner_app_unit_test(cf-ut
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_requires.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_syntax.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_cfgtable.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_msgids.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_platform_cfg.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_testcase.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_testrunner.c
         
     INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../mission_inc/

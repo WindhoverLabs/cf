@@ -27,12 +27,10 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/s2.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/timer.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/utils.c
-   
     INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/
-
     USER_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/user_doxy.in
 )
 

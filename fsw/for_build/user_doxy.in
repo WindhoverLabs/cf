@@ -92,7 +92,14 @@ WARN_LOGFILE           =
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = @APP_DEFINITION_DIR@/../../docs/dox_src/users_guide/cfs_cf.dox
-INPUT                 += @DEFINITION_SOURCES@
+INPUT                 += @APP_DEFINITION_DIR@/../src/cf_defs.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/cf_events.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/cf_msg.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/cf_tbldefs.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/cf_version.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/PUB/cfdp_config.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/PUB/cfdp_data_structures.h
+INPUT                 += @APP_DEFINITION_DIR@/../src/PUB/cfdp_syntax.h
 INPUT                 += @CONFIG_SOURCES@
 
 #INPUT_ENCODING         = UTF-8

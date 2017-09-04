@@ -78,7 +78,6 @@ add_airliner_app_def(cf
 
 add_airliner_app_unit_test(cf-ut
     UTASSERT 
-    NO_MASSIF
     SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_app.c
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_app.h

@@ -2,7 +2,7 @@
 /*
  * Filename: utassert.h
  *
- *  Copyright © 2007-2014 United States Government as represented by the 
+ *  Copyright ï¿½ 2007-2014 United States Government as represented by the 
  *  Administrator of the National Aeronautics and Space Administration. 
  *  All Other Rights Reserved.  
  *
@@ -99,6 +99,6 @@ uint32      UtAssert_GetPassCount(void);
 uint32      UtAssert_GetFailCount(void);
 
 /* Base assert function.  All asserts must call this function. */
-boolean     UtAssert(boolean Expression, char *Description, char *File, uint32 Line);
+boolean     UtAssert(boolean Expression, const char *Description, const char *File, uint32 Line);
 
 #endif

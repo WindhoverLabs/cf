@@ -2,7 +2,7 @@
 /*
  * Filename: uttest.h
  *
- *  Copyright © 2007-2014 United States Government as represented by the 
+ *  Copyright ï¿½ 2007-2014 United States Government as represented by the 
  *  Administrator of the National Aeronautics and Space Administration. 
  *  All Other Rights Reserved.  
  *
@@ -30,7 +30,7 @@
  */
 
 /* Adds a new unit test to the test database. */
-void    UtTest_Add(void (*Test)(void), void (*Setup)(void), void (*Teardown)(void), char *TestName);
+void    UtTest_Add(void (*Test)(void), void (*Setup)(void), void (*Teardown)(void), const char *TestName);
 
 /* Executes all unit tests contained in the test database.  Once all tests have finished executing 
  * a results summary is printed to the console and the test database is deleted.  This function also 

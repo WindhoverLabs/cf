@@ -1,0 +1,65 @@
+.row.os-theme-dark
+  article.col-xs-12.col-sm-12
+    header
+      span.widget-icon
+        i.fa.fa-table
+      h2 CF - Channel 0
+    div.widget-body.table-responsive
+      table.table.table-condensed
+        tbody
+          tr
+            th(style={width:'250px'}) PDUs Sent
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].PDUsSent'}],indicator:'text'}) ---
+          tr
+            th FilesSent
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].FilesSent'}],indicator:'text'}) ---
+          tr
+            th Success Counter
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].SuccessCounter'}],indicator:'text'}) ---
+          tr
+            th Failed Counter
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].FailedCounter'}],indicator:'text'}) ---
+          tr
+            th Pending Q File Cnt
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].PendingQFileCnt'}],indicator:'text'}) ---
+          tr
+            th Active Q File Cnt
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].ActiveQFileCnt'}],indicator:'text'}) ---
+          tr
+            th History Q File Cnt
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].HistoryQFileCnt'}],indicator:'text'}) ---
+          tr
+            th Flags
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].Flags'}],indicator:'text'}) ---
+          tr
+            th Red Light Cntr
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].RedLightCntr'}],indicator:'text'}) ---
+          tr
+            th Green Light Cntr
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].GreenLightCntr'}],indicator:'text'}) ---
+          tr
+            th Red Light Cntr
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].RedLightCntr'}],indicator:'text'}) ---
+          tr
+            th Poll Dirs Checked
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].PollDirsChecked'}],indicator:'text'}) ---
+          tr
+            th Pending Q Checked
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].PendingQChecked'}],indicator:'text'}) ---
+          tr
+            th Sem Value
+            td
+              span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/Chan[0].SemValue'}],indicator:'text'}) ---

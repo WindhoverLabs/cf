@@ -44,7 +44,7 @@
      "isClosable": true,
      "reorderEnabled": true,
      "title": "",
-     "width": 25.080971659919026,
+     "width": 50,
      "content": [
       {
        "type": "stack",
@@ -52,7 +52,7 @@
        "isClosable": true,
        "reorderEnabled": true,
        "title": "",
-       "activeItemIndex": 0,
+       "activeItemIndex": 2,
        "width": 50,
        "height": 50,
        "content": [
@@ -62,7 +62,29 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/amc/cdh"
+          "link": "/cf/cdh"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Configuration",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/config"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Transaction Diagnostics",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/trans_diag"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -75,16 +97,27 @@
        "isClosable": true,
        "reorderEnabled": true,
        "title": "",
-       "activeItemIndex": 0,
+       "activeItemIndex": 1,
        "height": 50,
        "content": [
         {
-         "title": "Application Scheduling",
+         "title": "Downlink",
          "type": "component",
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/sch/app_sch?appName=AMC"
+          "link": "/cf/down"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Uplink",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/up"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -94,47 +127,78 @@
      ]
     },
     {
-     "type": "stack",
-     "header": {},
+     "type": "column",
      "isClosable": true,
      "reorderEnabled": true,
      "title": "",
-     "activeItemIndex": 0,
-     "height": 100,
-     "width": 40.58873554839747,
+     "width": 50,
      "content": [
       {
-       "title": "Actuator Outputs",
-       "type": "component",
-       "componentName": "Blank",
-       "componentState": {
-        "text": "text",
-        "link": "/amc/ao"
-       },
+       "type": "stack",
+       "header": {},
        "isClosable": true,
-       "reorderEnabled": true
-      }
-     ]
-    },
-    {
-     "type": "stack",
-     "header": {},
-     "isClosable": true,
-     "reorderEnabled": true,
-     "title": "",
-     "activeItemIndex": 0,
-     "width": 34.3302927916835,
-     "content": [
+       "reorderEnabled": true,
+       "title": "",
+       "activeItemIndex": 1,
+       "width": 50,
+       "height": 50,
+       "content": [
+        {
+         "title": "Application",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/app"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Engine",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/engine"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        }
+       ]
+      },
       {
-       "title": "Event Filter",
-       "type": "component",
-       "componentName": "Blank",
-       "componentState": {
-        "text": "text",
-        "link": "/cfe/evs/efltr?appName=AMC"
-       },
+       "type": "stack",
+       "header": {},
        "isClosable": true,
-       "reorderEnabled": true
+       "reorderEnabled": true,
+       "title": "",
+       "activeItemIndex": 1,
+       "height": 50,
+       "content": [
+        {
+         "title": "Fault Condition",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/cond"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Memory",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/cf/memory"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        }
+       ]
       }
      ]
     }

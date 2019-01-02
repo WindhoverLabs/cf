@@ -97,6 +97,7 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_requires.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp_syntax.h
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/cfdp.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_symbols.c
         
     INCLUDES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/
@@ -105,6 +106,11 @@ add_airliner_app_def(cf
         
     USER_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/user_doxy.in   
     DESIGN_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/detail_doxy.in   
+    
+    MSG_OVERRIDES   ${CMAKE_CURRENT_SOURCE_DIR}/cf_msg_overrides.json 
+
+    COMMANDER_PLUGIN
+        ${CMAKE_CURRENT_SOURCE_DIR}/../../cdr
 )
 
 

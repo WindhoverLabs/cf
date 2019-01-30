@@ -1,6 +1,6 @@
 /* FILE: aaa.c   Action routines for CFDP state tables.
  *
- *  Copyright © 2007-2014 United States Government as represented by the 
+ *  Copyright ï¿½ 2007-2014 United States Government as represented by the 
  *  Administrator of the National Aeronautics and Space Administration. 
  *  All Other Rights Reserved.  
  *
@@ -374,9 +374,9 @@ boolean aaa__is_file_checksum_valid (MACHINE *m)
      if (mp->file_checksum_as_calculated != m->eof.file_checksum)
        {
          e_msg__ ("cfdp_engine: checksum mismatch -- %0x / %0x "
-                  "(eof/calculated)\n",
+                  "(eof/calculated) bypass at aaa.c ln 384\n",
                   m->eof.file_checksum, mp->file_checksum_as_calculated);
-         return (NO);
+//         return (NO);
        }
 
      return (YES);

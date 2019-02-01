@@ -73,7 +73,13 @@ module.exports = class CfeCdrPlugin extends CdrPlugin {
 					shortDescription: 'Uplink',
 					longDescription: 'Uplink',
 					filePath: '/up.pug'
-				}
+				},
+        gnd_cntrl: {
+          type: CdrPlugin.ContentType.PANEL,
+          shortDescription: 'Ground Control',
+          longDescription: 'CFDP Ground Control',
+          filePath: '/gnd_cntrl.pug'
+        }
       }
     };
 

@@ -46,6 +46,8 @@
     footer
       button.btn.btn-primary.cfdp-grnd-get-status(data-loaded="false") Get Status
       button.btn.btn-primary.cfdp-grnd-send-file( data-toggle="modal" data-target="#genericInputModal" data-title="Send File" data-submit="SendFileToSpc" data-custom='[{"label":"Class", "type":"field", "dtype":"text"},{"label":"Entity ID", "type":"field", "dtype":"text"},{"label":"Source", "type":"field", "dtype":"text"},{"label":"Destination", "type":"field", "dtype":"text"}]')  Send File From Ground
+      button.btn.btn-primary(data-cdr={cmd: {name: '/CF/CF_PlaybackFileCmd_t'},indicator:'cmd'}) Recv File To Ground
+
 script.
   
   $('.cfdp-grnd-get-status').each(function(){
@@ -69,7 +71,16 @@ script.
     });
     
   if(SendFileToSpc == undefined){
-    function SendFileToSpc(evt){
-      console.log(evt);
+    function SendFileToSpc(){
+      var args = {};
+      var labels = $( "#genericInputModal" ).find( 'label' );
+      for ( var i = 0; i < labels.length; ++i ) {
+        var label = labels[ i ].textContent;
+        var value = labels[ i ].control.value;
+        args[ label ] = value;
+      }
+      session.cfdpAPI('SEND_FROM_GND',[int(args['Class']),args['Entity ID'],args['Source'],args['Destination']],(data)=>{
+        console.log(data.msg);
+        })
     }
   }  

@@ -1,0 +1,114 @@
+.row.os-theme-dark
+  article.col-xs-12.col-sm-12
+    header
+      span.widget-icon
+        i.fa.fa-table
+      h2 CFDP Ground Transaction Status
+    div.widget-body.table-responsive
+      table.table.table-condensed
+        tbody
+          tr
+            th(style={width:'150px'}) Abandoned
+            td
+              span.cfdp-gnd-are-any-partners-frozen ---
+          tr
+            th Attempts
+            td
+              span.cfdp-gnd-how-many-frozen ---
+          tr
+            th Cancelled
+            td
+              span.cfdp-gnd-how-many-receivers ---
+          tr
+            th External File Xfer
+            td
+              span.cfdp-gnd-how-many-senders ---
+          tr
+            th Fd Offset
+            td
+              span.cfdp-gnd-how-many-suspended ---
+          tr
+            th Fd Length
+            td
+              span.cfdp-gnd-total-files-received ---
+          tr
+            th File Checksum As Calculated
+            td
+              span.cfdp-gnd-total-files-sent ---
+          tr
+            th Finished
+            td
+              span.cfdp-gnd-total-unsuccessful-receivers ---
+          tr
+            th Frozen
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+              
+          tr
+            th Has MD Been Received
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th How Many Naks
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Is This Trans Solely For Ack Fin
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Phase
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Received File Size
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Start Time
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Suspended
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Temp File Name
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Condition Code
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th Delivery Code
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+              
+          tr
+            th Final Status
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+              
+          tr
+            th Role
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+          tr
+            th State
+            td
+              span.cfdp-gnd-total-unsuccessful-senders ---
+    footer
+      button.btn.btn-primary.cfdp-grnd-get-trans-status(data-loaded="false") Get Transaction Status
+script.
+  
+  $('.cfdp-grnd-get-trans-status').each(function(){
+  if($(this).data('loaded')==false){
+    $(this).on('click',()=>{
+      session.cfdpAPI('GET_TRANS_STATUS',{},(data)=>{
+        console.log(data)
+
+        })
+      });
+  }
+    });

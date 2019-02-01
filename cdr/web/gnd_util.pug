@@ -1,0 +1,19 @@
+.row.os-theme-dark
+  article.col-xs-12.col-sm-12
+    header
+      span.widget-icon
+        i.fa.fa-table
+      h2 CFDP Ground Utilities
+    div.widget-body.table-responsive
+      table.table.table-condensed
+        tbody
+          tr
+            th(style={width:'150px'}) Requested MIB Param Name
+            td
+              span.cfdp-gnd-are-any-partners-frozen ---
+          tr
+            th Requested MIB Param Value
+            td
+              span.cfdp-gnd-how-many-frozen ---
+    footer
+      button.btn.btn-primary.cfdp-grnd-get-status(data-loaded="false") Get Mib

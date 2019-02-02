@@ -51,24 +51,24 @@
 script.
   
   $('.cfdp-grnd-get-status').each(function(){
-  if($(this).data('loaded')==false){
-    $(this).on('click',()=>{
-      session.cfdpAPI('GET_SUMMARY_STATUS',{},(data)=>{
-        if(data.msg == 'SUCCESS'){
-          $('.cfdp-gnd-are-any-partners-frozen').text(data.value.are_any_partners_frozen);
-          $('.cfdp-gnd-how-many-frozen').text(data.value.how_many_frozen);
-          $('.cfdp-gnd-how-many-receivers').text(data.value.how_many_receivers);
-          $('.cfdp-gnd-how-many-senders').text(data.value.how_many_senders);
-          $('.cfdp-gnd-how-many-suspended').text(data.value.how_many_suspended);
-          $('.cfdp-gnd-total-files-received').text(data.value.total_files_received);
-          $('.cfdp-gnd-total-files-sent').text(data.value.total_files_sent);
-          $('.cfdp-gnd-total-unsuccessful-receivers').text(data.value.total_unsuccessful_receivers);
-          $('.cfdp-gnd-total-unsuccessful-senders').text(data.value.total_unsuccessful_senders);          
-        }
+    if($(this).data('loaded')==false){
+      $(this).on('click',()=>{
+        session.cfdpAPI('GET_SUMMARY_STATUS',null,(data)=>{
+          if(data.msg == 'SUCCESS'){
+            $('.cfdp-gnd-are-any-partners-frozen').text(data.value.are_any_partners_frozen);
+            $('.cfdp-gnd-how-many-frozen').text(data.value.how_many_frozen);
+            $('.cfdp-gnd-how-many-receivers').text(data.value.how_many_receivers);
+            $('.cfdp-gnd-how-many-senders').text(data.value.how_many_senders);
+            $('.cfdp-gnd-how-many-suspended').text(data.value.how_many_suspended);
+            $('.cfdp-gnd-total-files-received').text(data.value.total_files_received);
+            $('.cfdp-gnd-total-files-sent').text(data.value.total_files_sent);
+            $('.cfdp-gnd-total-unsuccessful-receivers').text(data.value.total_unsuccessful_receivers);
+            $('.cfdp-gnd-total-unsuccessful-senders').text(data.value.total_unsuccessful_senders);          
+          }
         })
       });
-  }
-    });
+    }
+  });
     
   if(SendFileToSpc == undefined){
     function SendFileToSpc(){
@@ -79,8 +79,12 @@ script.
         var value = labels[ i ].control.value;
         args[ label ] = value;
       }
-      session.cfdpAPI('SEND_FROM_GND',[int(args['Class']),args['Entity ID'],args['Source'],args['Destination']],(data)=>{
-        console.log(data.msg);
-        })
+      session.cfdpAPI('SEND_FROM_GND',[parseInt(args['Class']),args['Entity ID'],args['Source'],args['Destination']],(data)=>{
+        if ( data.msg == 'SUCCESS' ) {
+          cu.logInfo( 'Succesfully sent file: '+args['Source'] );
+        } else {
+          cu.logError( 'Unable to send file: '+args['Source'] );
+        }
+      });
     }
   }  

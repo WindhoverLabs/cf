@@ -80,58 +80,32 @@
             td
               span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.LastFailedTrans'}],indicator:'text'}) ---
     footer
-      .btn-group.dropup
-        button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown')
+      .dropdown
+        button.btn.cdr-primary.dropup-toggle(type='button' id='MiscCommands' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
           | Commands
-          span.caret
-        ul#MiscCommands.dropdown-menu(role='menu')
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_PlaybackFileCmd_t'},indicator:'cmd'}) Playback File
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_PlaybackDirCmd_t'},indicator:'cmd'}) Playback Dir
-          li
-            a(data-cdr={cmd: {name: '/CF/Freeze'},indicator:'cmd'}) Freeze
-          li
-            a(data-cdr={cmd: {name: '/CF/Thaw'},indicator:'cmd'}) Thaw
-          li
-            a(data-cdr={cmd: {name: '/CF/Suspend'},indicator:'cmd'}) Suspend
-          li
-            a(data-cdr={cmd: {name: '/CF/Resume'},indicator:'cmd'}) Resume
-          li
-            a(data-cdr={cmd: {name: '/CF/Cancel'},indicator:'cmd'}) Cancel
-          li
-            a(data-cdr={cmd: {name: '/CF/Abandon'},indicator:'cmd'}) Abandon
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_SetMibParam_t'},indicator:'cmd'}) Set MIB Param
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_GetMibParam_t'},indicator:'cmd'}) Get MIB Param
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_SendTransCmd_t'},indicator:'cmd'}) Send Trans Diag Data
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_SetPollParamCmd_t'},indicator:'cmd'}) Set Poll Param
-          li
-            a(data-cdr={cmd: {name: '/CF/SendCfgParams'},indicator:'cmd'}) Send Cfg Params
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_WriteQueueCmd_t'},indicator:'cmd'}) Write Queue Info
-          li
-            a(data-cdr={cmd: {name: '/CF/EnableDequeue'},indicator:'cmd'}) Enable Dequeue
-          li
-            a(data-cdr={cmd: {name: '/CF/DisableDequeue'},indicator:'cmd'}) Disable Dequeue
-          li
-            a(data-cdr={cmd: {name: '/CF/EnableDirPolling'},indicator:'cmd'}) Enable Dir Polling
-          li
-            a(data-cdr={cmd: {name: '/CF/DisableDirPolling'},indicator:'cmd'}) Disable Dir Polling
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_DequeueNodeCmd_t'},indicator:'cmd'}) Delete Queue Node
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_PurgeQueueCmd_t'},indicator:'cmd'}) Purge Queue
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_WriteActiveTransCmd_t'},indicator:'cmd'}) Write Active Trans
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_KickstartCmd_t'},indicator:'cmd'}) Kickstart
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_QuickStatCmd_t'},indicator:'cmd'}) Quick Status
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_GiveTakeCmd_t'},indicator:'cmd'}) Give / Take
-          li
-            a(data-cdr={cmd: {name: '/CF/CF_AutoSuspendEnCmd_t'},indicator:'cmd'}) Ena/Dis Auto Suspend
+        .dropdown-menu(role='menu' aria-labelledby='MiscCommands' style="max-height:200px;overflow-y:scroll")
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PlaybackFileCmd_t'},indicator:'cmd'}) Playback File
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PlaybackDirCmd_t'},indicator:'cmd'}) Playback Dir
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Freeze'},indicator:'cmd'}) Freeze
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Thaw'},indicator:'cmd'}) Thaw
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Suspend'},indicator:'cmd'}) Suspend
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Resume'},indicator:'cmd'}) Resume
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Cancel'},indicator:'cmd'}) Cancel
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Abandon'},indicator:'cmd'}) Abandon
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SetMibParam_t'},indicator:'cmd'}) Set MIB Param
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_GetMibParam_t'},indicator:'cmd'}) Get MIB Param
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SendTransCmd_t'},indicator:'cmd'}) Send Trans Diag Data
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SetPollParamCmd_t'},indicator:'cmd'}) Set Poll Param
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/SendCfgParams'},indicator:'cmd'}) Send Cfg Params
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_WriteQueueCmd_t'},indicator:'cmd'}) Write Queue Info
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/EnableDequeue'},indicator:'cmd'}) Enable Dequeue
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/DisableDequeue'},indicator:'cmd'}) Disable Dequeue
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/EnableDirPolling'},indicator:'cmd'}) Enable Dir Polling
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/DisableDirPolling'},indicator:'cmd'}) Disable Dir Polling
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_DequeueNodeCmd_t'},indicator:'cmd'}) Delete Queue Node
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PurgeQueueCmd_t'},indicator:'cmd'}) Purge Queue
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_WriteActiveTransCmd_t'},indicator:'cmd'}) Write Active Trans
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_KickstartCmd_t'},indicator:'cmd'}) Kickstart
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_QuickStatCmd_t'},indicator:'cmd'}) Quick Status
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_GiveTakeCmd_t'},indicator:'cmd'}) Give / Take
+            a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_AutoSuspendEnCmd_t'},indicator:'cmd'}) Ena/Dis Auto Suspend

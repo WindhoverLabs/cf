@@ -20,6 +20,12 @@ module.exports = class CfeCdrPlugin extends CdrPlugin {
 					longDescription: 'Main CF.',
 					filePath: '/main_layout.lyt'
 				},
+        gnd_main: {
+          type: CdrPlugin.ContentType.LAYOUT,
+          shortDescription: 'Main Ground',
+          longDescription: 'Main Ground CF.',
+          filePath: '/gnd_main_layout.lyt'
+        },
 				cdh: {
 					type: CdrPlugin.ContentType.PANEL,
 					shortDescription: 'Command and Data Handling',
@@ -73,7 +79,25 @@ module.exports = class CfeCdrPlugin extends CdrPlugin {
 					shortDescription: 'Uplink',
 					longDescription: 'Uplink',
 					filePath: '/up.pug'
-				}
+				},
+        gnd_cntrl: {
+          type: CdrPlugin.ContentType.PANEL,
+          shortDescription: 'Ground Control',
+          longDescription: 'CFDP Ground Control',
+          filePath: '/gnd_cntrl.pug'
+        },
+        gnd_trans: {
+          type: CdrPlugin.ContentType.PANEL,
+          shortDescription: 'Ground Transaction Status',
+          longDescription: 'CFDP Ground Transaction Status',
+          filePath: '/gnd_trans.pug'
+        },
+        gnd_util: {
+          type: CdrPlugin.ContentType.PANEL,
+          shortDescription: 'Ground Utilities',
+          longDescription: 'CFDP Ground Utilities',
+          filePath: '/gnd_util.pug'
+        }
       }
     };
 

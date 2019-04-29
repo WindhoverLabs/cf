@@ -62,7 +62,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/cdh"
+          "link": "flight/apps/cf/cdh"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -73,7 +73,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/config"
+          "link": "flight/apps/cf/config"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -84,7 +84,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/trans_diag"
+          "link": "flight/apps/cf/trans_diag"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -106,7 +106,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/down"
+          "link": "flight/apps/cf/down"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -117,7 +117,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/up"
+          "link": "flight/apps/cf/up"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -149,7 +149,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/app"
+          "link": "flight/apps/cf/app"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -160,7 +160,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/engine"
+          "link": "flight/apps/cf/engine"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -182,7 +182,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/cond"
+          "link": "flight/apps/cf/cond"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -193,7 +193,7 @@
          "componentName": "Blank",
          "componentState": {
           "text": "text",
-          "link": "/cf/memory"
+          "link": "flight/apps/cf/memory"
          },
          "isClosable": true,
          "reorderEnabled": true

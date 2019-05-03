@@ -1,0 +1,16 @@
+table.table.table-condensed
+  tbody
+    tr
+      th(style={width:'150px'}) Cmd Count
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/CmdCounter'}]}) ---
+    tr
+      th Cmd Error Count
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/ErrCounter'}]}) ---
+        
+footer.btn-group(role="group") 
+  button.btn.cdr-primary(data-cdr={cmd: {name: '/CF/Noop'}}) No-Op
+  button.btn.cdr-primary(data-cdr={cmd: {name: '/CF/CF_ResetCtrsCmd_t'}}) Reset
+
+  

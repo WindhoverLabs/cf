@@ -1,0 +1,105 @@
+table.table.table-condensed
+  tbody
+    tr
+      th(style={width:'250px'}) Wakeup for File Proc
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.WakeupForFileProc'}]}) ---
+    tr
+      th Engine Cycle Count
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.EngineCycleCount'}]}) ---
+    tr
+      th Memory In Use
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.MemInUse'}]}) ---
+    tr
+      th Peak Mem In Use
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.PeakMemInUse'}]}) ---
+    tr
+      th Low Memory Mark
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.LowMemoryMark'}]}) ---
+    tr
+      th Max Mem Needed
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.MaxMemNeeded'}]}) ---
+    tr
+      th Mem Allocated
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.MemAllocated'}]}) ---
+    tr
+      th Buffer Pool Handle
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.BufferPoolHandle'}]}) ---
+    tr
+      th Q Nodes Allocated
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.QNodesAllocated'}]}) ---
+    tr
+      th Q Nodes Deallocated
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.QNodesDeallocated'}]}) ---
+    tr
+      th PDUs Received
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.PDUsReceived'}]}) ---
+    tr
+      th PDUs Rejected
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.PDUsRejected'}]}) ---
+    tr
+      th Total In Prog Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.TotalInProgTrans'}]}) ---
+    tr
+      th Total Failed Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.TotalFailedTrans'}]}) ---
+    tr
+      th Total Abandon Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.TotalAbandonTrans'}]}) ---
+    tr
+      th Total Success Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.TotalSuccessTrans'}]}) ---
+    tr
+      th Total Completed Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.TotalCompletedTrans'}]}) ---
+    tr
+      th Last Failed Trans
+      td
+        span(data-cdr={tlm: [{name: '/CF/CF_HkPacket_t/App.LastFailedTrans'}]}) ---
+
+footer.btn-group(role="group")      
+  .dropdown
+    button.btn.cdr-primary.dropup-toggle(type='button' id='MiscCommands' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+      | Commands
+    .dropdown-menu(role='menu' aria-labelledby='MiscCommands' style="max-height:200px;overflow-y:scroll")
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PlaybackFileCmd_t'}}) Playback File
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PlaybackDirCmd_t'}}) Playback Dir
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Freeze'}}) Freeze
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Thaw'}}) Thaw
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Suspend'}}) Suspend
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Resume'}}) Resume
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Cancel'}}) Cancel
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/Abandon'}}) Abandon
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SetMibParam_t'}}) Set MIB Param
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_GetMibParam_t'}}) Get MIB Param
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SendTransCmd_t'}}) Send Trans Diag Data
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_SetPollParamCmd_t'}}) Set Poll Param
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/SendCfgParams'}}) Send Cfg Params
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_WriteQueueCmd_t'}}) Write Queue Info
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/EnableDequeue'}}) Enable Dequeue
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/DisableDequeue'}}) Disable Dequeue
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/EnableDirPolling'}}) Enable Dir Polling
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/DisableDirPolling'}}) Disable Dir Polling
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_DequeueNodeCmd_t'}}) Delete Queue Node
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_PurgeQueueCmd_t'}}) Purge Queue
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_WriteActiveTransCmd_t'}}) Write Active Trans
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_KickstartCmd_t'}}) Kickstart
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_QuickStatCmd_t'}}) Quick Status
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_GiveTakeCmd_t'}}) Give / Take
+      a.dropdown-item(href='#' data-cdr={cmd: {name: '/CF/CF_AutoSuspendEnCmd_t'}}) Ena/Dis Auto Suspend

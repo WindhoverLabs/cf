@@ -33,11 +33,17 @@ module.exports = class CfeCdrFlightAppsPlugin extends CdrFlightAppsPlugin {
 					    longDescription: 'Application.',
 					    filePath: 'app.pug'
 				    },
-				    down: {
+				    down0: {
 					    type: CdrFlightAppsPlugin.ContentType.PANEL,
-					    shortDescription: 'Downlink',
-					    longDescription: 'Downlink',
-					    filePath: 'down.pug'
+					    shortDescription: 'Downlink 0',
+					    longDescription: 'Downlink channel 0',
+					    filePath: 'down0.pug'
+					},
+				    down1: {
+					    type: CdrFlightAppsPlugin.ContentType.PANEL,
+					    shortDescription: 'Downlink 1',
+					    longDescription: 'Downlink channel 1',
+					    filePath: 'down1.pug'
 					},
 				    cond: {
 					    type: CdrFlightAppsPlugin.ContentType.PANEL,

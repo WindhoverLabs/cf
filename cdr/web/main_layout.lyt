@@ -1,4 +1,4 @@
-﻿{
+{
  "settings": {
   "hasHeaders": true,
   "constrainDragToContainer": false,
@@ -44,7 +44,7 @@
      "isClosable": true,
      "reorderEnabled": true,
      "title": "",
-     "width": 50,
+     "width": 34.66983085133701,
      "content": [
       {
        "type": "stack",
@@ -52,12 +52,12 @@
        "isClosable": true,
        "reorderEnabled": true,
        "title": "",
-       "activeItemIndex": 2,
+       "activeItemIndex": 0,
        "width": 50,
        "height": 50,
        "content": [
         {
-         "title": "Command and Data Handling",
+         "title": "HK",
          "type": "component",
          "componentName": "Blank",
          "componentState": {
@@ -101,23 +101,34 @@
        "height": 50,
        "content": [
         {
-         "title": "Downlink",
-         "type": "component",
-         "componentName": "Blank",
-         "componentState": {
-          "text": "text",
-          "link": "flight/apps/cf/down"
-         },
-         "isClosable": true,
-         "reorderEnabled": true
-        },
-        {
          "title": "Uplink",
          "type": "component",
          "componentName": "Blank",
          "componentState": {
           "text": "text",
           "link": "flight/apps/cf/up"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Downlink 0",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/apps/cf/down0"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "Downlink 1",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/apps/cf/down1"
          },
          "isClosable": true,
          "reorderEnabled": true
@@ -131,7 +142,7 @@
      "isClosable": true,
      "reorderEnabled": true,
      "title": "",
-     "width": 50,
+     "width": 34.99324345256217,
      "content": [
       {
        "type": "stack",
@@ -139,9 +150,9 @@
        "isClosable": true,
        "reorderEnabled": true,
        "title": "",
-       "activeItemIndex": 1,
+       "activeItemIndex": 0,
        "width": 50,
-       "height": 50,
+       "height": 62.64501160092807,
        "content": [
         {
          "title": "Application",
@@ -164,6 +175,17 @@
          },
          "isClosable": true,
          "reorderEnabled": true
+        },
+        {
+         "title": "Tbl Ctrl",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/core/tbl/tbl_ctl?appName=CF"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
         }
        ]
       },
@@ -173,8 +195,8 @@
        "isClosable": true,
        "reorderEnabled": true,
        "title": "",
-       "activeItemIndex": 1,
-       "height": 50,
+       "activeItemIndex": 0,
+       "height": 37.35498839907193,
        "content": [
         {
          "title": "Fault Condition",
@@ -194,6 +216,93 @@
          "componentState": {
           "text": "text",
           "link": "flight/apps/cf/memory"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "column",
+     "isClosable": true,
+     "reorderEnabled": true,
+     "title": "",
+     "width": 30.33692569610082,
+     "content": [
+      {
+       "type": "stack",
+       "header": {},
+       "isClosable": true,
+       "reorderEnabled": true,
+       "title": "",
+       "activeItemIndex": 0,
+       "width": 29.3036750483559,
+       "height": 39.322124649828226,
+       "content": [
+        {
+         "title": "Events",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/core/evs/efltr?appName=CF"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        },
+        {
+         "title": "App Ctrl",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/core/es/appctrl?appName=CF"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        }
+       ]
+      },
+      {
+       "type": "stack",
+       "header": {},
+       "isClosable": true,
+       "reorderEnabled": true,
+       "title": "",
+       "activeItemIndex": 0,
+       "height": 31.621055727309937,
+       "content": [
+        {
+         "title": "Scheduling",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/apps/sch/app_sch?appName=CF"
+         },
+         "isClosable": true,
+         "reorderEnabled": true
+        }
+       ]
+      },
+      {
+       "type": "stack",
+       "header": {},
+       "isClosable": true,
+       "reorderEnabled": true,
+       "title": "",
+       "activeItemIndex": 0,
+       "height": 29.056819622861823,
+       "content": [
+        {
+         "title": "Telemetry",
+         "type": "component",
+         "componentName": "Blank",
+         "componentState": {
+          "text": "text",
+          "link": "/flight/apps/to/tlm_app?appName=CF"
          },
          "isClosable": true,
          "reorderEnabled": true

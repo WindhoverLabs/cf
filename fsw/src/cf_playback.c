@@ -2,7 +2,7 @@
 ** File:
 **   $Id: cf_playback.c 1.29.1.1 2015/03/06 15:30:24EST sstrege Exp  $
 **
-**   Copyright © 2007-2014 United States Government as represented by the 
+**   Copyright ï¿½ 2007-2014 United States Government as represented by the 
 **   Administrator of the National Aeronautics and Space Administration. 
 **   All Other Rights Reserved.  
 **
@@ -436,8 +436,8 @@ int32 CF_QueueDirectoryFiles(CF_QueueDirFiles_t  *Ptr)
         }
         
         /* if it's a sub directory... continue to next file */
-        #ifdef DT_DIR
-        if(direntp->d_type == DT_DIR)
+        #ifdef OS_DT_DIR
+        if(direntp->d_type == OS_DT_DIR)
         {
             CFE_ES_PerfLogExit(CF_QDIRFILES_PERF_ID);
             continue;

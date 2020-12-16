@@ -133,7 +133,7 @@ os_dirent_t *  OS_readdirHook (os_dirp_t directory)
     }else if(ReaddirHookCallCnt == 3){
       
       strcpy(ReaddirHookDirEntry.d_name,"filename1.txt");
-      ReaddirHookDirEntry.d_type = DT_DIR;
+      ReaddirHookDirEntry.d_type = OS_DT_DIR;
     
     }else if(ReaddirHookCallCnt == 4){
       

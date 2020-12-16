@@ -103,14 +103,10 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/
-        
-    USER_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/user_doxy.in   
+         
     DESIGN_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/detail_doxy.in   
     
-    MSG_OVERRIDES   ${CMAKE_CURRENT_SOURCE_DIR}/cf_msg_overrides.json 
-
-    COMMANDER_PLUGIN
-        ${CMAKE_CURRENT_SOURCE_DIR}/../../cdr
+    DESIGN_DEFINITION   ${CMAKE_CURRENT_SOURCE_DIR}/cf_msg_overrides.json 
     
     REFERENCE_CONFIG
         ${PROJECT_SOURCE_DIR}/apps/cf/fsw/mission_inc
@@ -120,6 +116,9 @@ add_airliner_app_def(cf
 
 #add_airliner_app_unit_test(cf-ut
 #    UTASSERT 
+#    NO_HELGRIND
+#    NO_MASSIF
+#        
 #    SOURCES
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_app.c
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_app.h
@@ -189,7 +188,7 @@ add_airliner_app_def(cf
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_platform_cfg.h
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_testcase.c
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../unit_test/cf_testrunner.c
-#        
+#
 #    INCLUDES
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../mission_inc/
 #        ${CMAKE_CURRENT_SOURCE_DIR}/../platform_inc/

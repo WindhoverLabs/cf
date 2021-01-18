@@ -319,6 +319,324 @@
       id: 159
     CF_QUICK_CMD_EID : 
       id: 160
+  msg_def_overrides:
+    - parent: CF_ResetCtrsCmd_t
+      member: Value
+      type: enumeration
+      enumerations:
+        ALL:   0
+        CMD:   1
+        FAULT: 2
+        UP:    3
+        DOWN:  4
+        
+    - parent: CF_PlaybackFileCmd_t
+      member: Class
+      type: enumeration
+      enumerations:
+        CLASS_1: 1
+        CLASS_2: 2
+    - parent: CF_PlaybackFileCmd_t
+      member: Preserve
+      type: enumeration
+      enumerations:
+        DELETE: 0
+        KEEP:   1
+    - parent: CF_PlaybackFileCmd_t
+      member: PeerEntityId
+      type: string
+    - parent: CF_PlaybackFileCmd_t
+      member: SrcFilename
+      type: string
+    - parent: CF_PlaybackFileCmd_t
+      member: DstFilename
+      type: string
+
+    - parent: CF_PlaybackDirCmd_t
+      member: Class
+      type: enumeration
+      enumerations:
+        CLASS_1: 1
+        CLASS_2: 2
+    - parent: CF_PlaybackDirCmd_t
+      member: Preserve
+      type: enumeration
+      enumerations:
+        DELETE: 0
+        KEEP:   1
+    - parent: CF_PlaybackDirCmd_t
+      member: PeerEntityId
+      type: string
+    - parent: CF_PlaybackDirCmd_t
+      member: SrcPath
+      type: string
+    - parent: CF_PlaybackDirCmd_t
+      member: DstPath
+      type: string
+      
+    - parent: CF_SetPollParamCmd_t
+      member: Class
+      type: enumeration
+      enumerations:
+        CLASS_1: 1
+        CLASS_2: 2
+    - parent: CF_SetPollParamCmd_t
+      member: Preserve
+      type: enumeration
+      enumerations:
+        DELETE: 0
+        KEEP:   1
+    - parent: CF_SetPollParamCmd_t
+      member: PeerEntityId
+      type: string
+    - parent: CF_SetPollParamCmd_t
+      member: SrcPath
+      type: string
+    - parent: CF_SetPollParamCmd_t
+      member: DstPath
+      type: string
+      
+    - parent: CF_CARSCmd_t
+      member: Trans
+      type: string
+      
+    - parent: CF_WriteQueueCmd_t
+      member: Type
+      type: enumeration
+      enumerations:
+        UP:   1
+        DOWN: 2
+    - parent: CF_WriteQueueCmd_t
+      member: Queue
+      type: enumeration
+      enumerations:
+        PENDING: 0
+        ACTIVE:  1
+        HISTORY: 2
+    - parent: CF_WriteQueueCmd_t
+      member: Filename
+      type: string
+      
+    - parent: CF_WriteActiveTransCmd_t
+      member: Type
+      type: enumeration
+      enumerations:
+        ALL:  0
+        UP:   1
+        DOWN: 2
+    - parent: CF_WriteActiveTransCmd_t
+      member: Filename
+      type: string
+      
+    - parent: CF_SendTransCmd_t
+      member: Trans
+      type: string
+      
+    - parent: CF_DequeueNodeCmd_t
+      member: Trans
+      type: string
+      
+    - parent: CF_PurgeQueueCmd_t
+      member: Type
+      type: enumeration
+      enumerations:
+        UP:   1
+        DOWN: 2
+    - parent: CF_PurgeQueueCmd_t
+      member: Queue
+      type: enumeration
+      enumerations:
+        PENDING: 0
+        ACTIVE:  1
+        HISTORY: 2
+        
+    - parent: CF_QuickStatCmd_t
+      member: Trans
+      type: string
+      
+    - parent: CF_GiveTakeCmd_t
+      member: GiveOrTakeSemaphore
+      type: enumeration
+      enumerations:
+        GIVE: 0
+        TAKE: 1
+        
+    - parent: CF_AutoSuspendEnCmd_t
+      member: EnableDisable
+      type: enumeration
+      enumerations:
+        DISABLE: 0
+        ENABLE:  1
+        
+    - parent: AutoSuspend_Telemetry_t
+      member: EnFlag
+      type: enumeration
+      enumerations:
+        DISABLE: 0
+        ENABLE:  1
+        
+    - parent: Engine_Telemetry_t
+      member: FlightEngineEntityId
+      type: string
+        
+    - parent: Uplink_Telemetry_t
+      member: LastFileUplinked
+      type: string
+      
+    - parent: App_Telemetry_t
+      member: LastFailedTrans
+      type: string
+      
+    - parent: CF_EngTransStat_t
+      member: DeliCode
+      type: enumeration
+      enumerations:
+        DONT_CARE_0:     0
+        DONT_CARE_1:     1
+        DATA_COMPLETE:   2
+        DATA_INCOMPLETE: 3
+    - parent: CF_EngTransStat_t
+      member: FinalStat
+      type: enumeration
+      enumerations:
+        UNKNOWN:    0
+        SUCCESSFUL: 1
+        CANCELLED:  2
+        ABANDONED:  3
+    - parent: CF_EngTransStat_t
+      member: Role
+      type: enumeration
+      enumerations:
+        CLASS_1_SENDER:   1
+        CLASS_1_RECEIVER: 2
+        CLASS_2_SENDER:   3
+        CLASS_2_RECEIVER: 4
+    - parent: CF_EngTransStat_t
+      member: State
+      type: enumeration
+      enumerations:
+        UNINITIALIZED:   0
+        S1:              1
+        S2:              2
+        S3:              3
+        S4:              4
+        S5:              5
+        S6:              6
+        FINISHED:        7
+    - parent: CF_EngTransStat_t
+      member: SrcFile
+      type: string
+    - parent: CF_EngTransStat_t
+      member: DstFile
+      type: string
+    - parent: CF_EngTransStat_t
+      member: TmpFile
+      type: string
+      
+    - parent: CF_AppTransStat_t
+      member: Status
+      type: enumeration
+      enumerations:
+        UNKNOWN:        0
+        SUCCESS:        1
+        CANCELLED:      2
+        ABANDON:        3
+        NO_META:        4
+        PENDING:        5
+        ALREADY_ACTIVE: 6
+        PUT_REQ_ISSUED: 7 
+        PUT_REQ_FAIL:   8
+        ACTIVE:         9
+    - parent: CF_AppTransStat_t
+      member: CondCode
+      type: enumeration
+      enumerations:
+        NO_ERROR:                   0
+        POSITIVE_ACK_LIMIT_REACHED: 1
+        KEEP_ALIVE_LIMIT_REACHED:   2
+        INVALID_TRANSMISSION_MODE:  3
+        FILESTORE_REJECTION:        4
+        FILE_CHECKSUM_FAILURE:      5
+        FILE_SIZE_ERROR:            6
+        NAK_LIMIT_REACHED:          7
+        INACTIVITY_DETECTED:        8
+        INVALID_FILE_STRUCTURE:     9
+        RESERVED_BY_CCSDS_10:      10
+        RESERVED_BY_CCSDS_11:      11
+        RESERVED_BY_CCSDS_12:      12
+        RESERVED_BY_CCSDS_13:      13
+        SUSPEND_REQUEST_RECEIVED:  14
+        CANCEL_REQUEST_RECEIVED:   15
+    - parent: CF_AppTransStat_t
+      member: Class
+      type: enumeration
+      enumerations:
+        CLASS_1: 1
+        CLASS_2: 2
+    - parent: CF_AppTransStat_t
+      member: Source
+      type: enumeration
+      enumerations:
+        PLAYBACK_FILE_CMD: 1
+        PLAYBACK_DIR_CMD:  2
+        POLL_DIRECTORY:    3
+    - parent: CF_AppTransStat_t
+      member: NodeType
+      type: enumeration
+      enumerations:
+        ALL:      0
+        UPLINK:   1
+        PLAYBACK: 2
+    - parent: CF_AppTransStat_t
+      member: SrcEntityId
+      type: string
+    - parent: CF_AppTransStat_t
+      member: SrcFile
+      type: string
+    - parent: CF_AppTransStat_t
+      member: DstFile
+      type: string
+      
+    - parent: CF_QueueInfoFileEntry_t
+      member: TransStatus
+      type: enumeration
+      enumerations:
+        UNKNOWN:        0
+        SUCCESS:        1
+        CANCELLED:      2
+        ABANDON:        3
+        NO_META:        4
+        PENDING:        5
+        ALREADY_ACTIVE: 6
+        PUT_REQ_ISSUED: 7 
+        PUT_REQ_FAIL:   8
+        ACTIVE:         9
+    - parent: CF_QueueInfoFileEntry_t
+      member: SrcEntityId
+      type: string
+    - parent: CF_QueueInfoFileEntry_t
+      member: SrcFile
+      type: string
+      
+    - parent: CF_ConfigPacket_t
+      member: SaveIncompleteFiles
+      type: string
+    - parent: CF_ConfigPacket_t
+      member: PipeName
+      type: string
+    - parent: CF_ConfigPacket_t
+      member: TmpFilePrefix
+      type: string
+    - parent: CF_ConfigPacket_t
+      member: CfgTblName
+      type: string
+    - parent: CF_ConfigPacket_t
+      member: CfgTbleFilename
+      type: string
+    - parent: CF_ConfigPacket_t
+      member: DefQInfoFilename
+      type: string
+      
   telemetry: 
     CF_CONFIG_TLM_MID: 
       msgID: 
@@ -326,18 +644,6 @@
     CF_HK_TLM_MID: 
       msgID: 
       struct: CF_HkPacket_t
-    CF_SPARE1_TLM_MID: 
-      msgID: 
-      struct: 
-    CF_SPARE2_TLM_MID: 
-      msgID: 
-      struct: 
-    CF_SPARE3_TLM_MID: 
-      msgID: 
-      struct: 
-    CF_SPARE4_TLM_MID: 
-      msgID: 
-      struct: 
     CF_TRANS_TLM_MID: 
       msgID: 
       struct: CF_TransPacket_t

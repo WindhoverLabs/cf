@@ -649,7 +649,7 @@
       struct: CF_TransPacket_t
   commands: 
     CF_CMD_MID: 
-      msgid: 
+      msgID: 
       commands: 
         Noop: 
           cc: 0
@@ -736,13 +736,13 @@
           cc: 27
           struct: CF_CyclesPerWakeupCmd_t
     CF_SEND_HK_MID: 
-      msgid: 
+      msgID: 
       commands: 
         SendHK: 
           cc: 0
           struct: CF_NoArgsCmd
     CF_WAKE_UP_REQ_CMD_MID: 
-      msgid: 
+      msgID: 
       commands: 
         WakeUp: 
           cc: 0

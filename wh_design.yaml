@@ -740,13 +740,13 @@
       commands: 
         SendHK: 
           cc: 0
-          struct: CF_NoArgsCmd
+          struct: CF_NoArgsCmd_t
     CF_WAKE_UP_REQ_CMD_MID: 
       msgID: 
       commands: 
         WakeUp: 
           cc: 0
-          struct: CF_NoArgsCmd
+          struct: CF_NoArgsCmd_t
   perfids: 
     CF_FILESIZE_PERF_ID: 
       id: 

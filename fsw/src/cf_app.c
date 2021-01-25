@@ -1022,17 +1022,9 @@ void CF_SendPDUToEngine(CFE_SB_MsgPtr_t MessagePtr)
     /* claculate the pdu 'length' field needed by the engine */
     CF_AppData.RawPduInputBuf.length = PduHdrPtr->PDataLen + PduHdrBytes;
 
-    if(CF_AppData.RawPduInputBuf.length > CF_INCOMING_PDU_BUF_SIZE){
-        CFE_EVS_SendEvent(CF_PDU_RCV_ERR2_EID, CFE_EVS_ERROR,
-            "PDU Rcv Error:length %d exceeds CF_INCOMING_PDU_BUF_SIZE %d",
-            CF_AppData.RawPduInputBuf.length,CF_INCOMING_PDU_BUF_SIZE);
-        CF_AppData.Hk.App.PDUsRejected++; 
-        return;
-    }/* end if */
-
     CFE_PSP_MemCpy(&CF_AppData.RawPduInputBuf.content[0],
                     IncomingPduPtr,
-                    CF_AppData.RawPduInputBuf.length);
+                    sizeof(CF_AppData.RawPduInputBuf));
       
     if(!cfdp_give_pdu(CF_AppData.RawPduInputBuf))
     {

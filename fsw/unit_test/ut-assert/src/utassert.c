@@ -44,7 +44,7 @@ uint32 UtAssert_GetFailCount(void)
     return(UtAssertFailCount);
 }
 
-boolean UtAssert(boolean Expression, char *Description, char *File, uint32 Line)
+boolean UtAssert(boolean Expression, const char *Description, const char *File, uint32 Line)
 {
     if (Expression) {
         #ifdef UT_VERBOSE

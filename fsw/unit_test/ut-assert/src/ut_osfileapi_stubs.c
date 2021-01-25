@@ -260,7 +260,7 @@ int32 OS_check_name_length(const char *path)
     return OS_FS_SUCCESS;
 }
 
-int32 OS_ShellOutputToFile(char* Cmd, int32 OS_fd)
+int32 OS_ShellOutputToFile(const char* Cmd, int32 OS_fd)
 {   
     return OS_FS_SUCCESS;
 }

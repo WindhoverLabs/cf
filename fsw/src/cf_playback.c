@@ -436,8 +436,8 @@ int32 CF_QueueDirectoryFiles(CF_QueueDirFiles_t  *Ptr)
         }
         
         /* if it's a sub directory... continue to next file */
-        #ifdef DT_DIR
-        if(direntp->d_type == DT_DIR)
+        #ifdef OS_DT_DIR
+        if(direntp->d_type == OS_DT_DIR)
         {
             CFE_ES_PerfLogExit(CF_QDIRFILES_PERF_ID);
             continue;

@@ -31,7 +31,7 @@
  #
  #############################################################################
  
-add_airliner_app_def(cf
+buildliner_add_app_def(cf
     FILE CF
     SOURCES
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/cf_app.c
@@ -104,9 +104,7 @@ add_airliner_app_def(cf
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PRI/
         ${CMAKE_CURRENT_SOURCE_DIR}/../src/PUB/
          
-    DESIGN_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/detail_doxy.in   
-    
-    DESIGN_DEFINITION   ${CMAKE_CURRENT_SOURCE_DIR}/cf_msg_overrides.json 
+    DESIGN_DOCS   ${CMAKE_CURRENT_SOURCE_DIR}/detail_doxy.in  
     
     REFERENCE_CONFIG
         ${PROJECT_SOURCE_DIR}/apps/cf/fsw/mission_inc
@@ -114,7 +112,7 @@ add_airliner_app_def(cf
 )
 
 
-#add_airliner_app_unit_test(cf-ut
+#buildliner_add_app_def(cf-ut
 #    UTASSERT 
 #    NO_HELGRIND
 #    NO_MASSIF

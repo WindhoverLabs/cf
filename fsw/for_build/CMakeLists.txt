@@ -112,7 +112,7 @@ buildliner_add_app_def(cf
 )
 
 
-#buildliner_add_app_def(cf-ut
+#buildliner_add_app_unit_test(cf-ut
 #    UTASSERT 
 #    NO_HELGRIND
 #    NO_MASSIF
